@@ -1,6 +1,9 @@
 /// <reference types="cypress" />
 describe('page', () => {
-  it('works', () => {
-    cy.visit('https://example.cypress.io')
+  it('no workie', () => {
+    cy.visit('index.html')
+    cy.get('#test')
+      .type('FOO{enter}BAR')
+      .should('have.html', 'FOO\nBAR')
   })
 })
